@@ -20,7 +20,9 @@ class stdClass#5 (1) {
 Necessary PHP 8.0 or more (Necessário PHP 8.0 ou superior)
 
 ## Install
-`composer require ngomafortuna/apireceiver`
+```shell
+composer require ngomafortuna/apireceiver
+```
 
 ## Syntax and mode of use
 ```php
