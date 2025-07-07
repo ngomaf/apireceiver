@@ -11,9 +11,9 @@ $url = "http://127.0.0.1:8105/api/user";
 $client = new CurlAPIClient($url);
 
 $data = [
-    'id' => 38,
-    'name' => 'Dorcas Tchiquemba Bueti Sonhi',
-    'email' => 'dorcas.sonhi@mtec.ao' 
+    'id' => 40,
+    'name' => 'Bleble',
+    'email' => 'ble@mtec.ao' 
 ];
 
 var_dump($client->put($data));

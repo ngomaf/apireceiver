@@ -10,6 +10,6 @@ $url = "http://127.0.0.1:8105/api/user";
 
 $client = new CurlAPIClient($url);
 
-$data = ['id' => 39];
+$data = ['id' => 40];
 
 var_dump($client->delete($data));

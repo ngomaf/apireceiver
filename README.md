@@ -9,10 +9,11 @@ This component have two features (Suported methods):
 - DELETE (delete one element - eliminar um elemento)
 
 ## Important
-All methods return object, if no receive data in 10 s, or to happen one error return `object`:
+All methods return `object`, if no receive data in 15 s, or to happen one error return `object`:
 ```shell
-class stdClass#5 (1) {
-  public $error => string(71) "message of error"
+class stdClass#5 (2) {
+  public $status => int(500)
+  public $message => string(21) "Internal Server Error"
 }
 ```
 
@@ -73,45 +74,89 @@ var_dump($client->delete($data));
 Results
 ```shell
 // GET result
+class stdClass#34 (2) {
+  public $data =>
+  class stdClass#32 (27) {
+    public $0 => class stdClass#5 (3) {
+      public $id => int(27)
+      public $name => string(13) "Ngoma Fortuna"
+      public $email => string(21) "ngoma.fortuna@mtec.ao"
+    }
+    public $1 => class stdClass#6 (3) {
+      public $id => int(28)
+      public $name => string(12) "Rosa Fortuna"
+      public $email => string(20) "rosa.fortuna@mtec.ao"
+    }
+    public $2 => class stdClass#7 (3) {
+      public $id => int(29)
+      public $name => string(17) "Lucrécia Fortuna"
+      public $email => string(24) "lucrecia.fortuna@mtec.ao"
+    }
+  }
+  public $status =>
+  class stdClass#33 (2) {
+    public $number => int(200)
+    public $message => string(12) "OK (Success)"
+  }
+}
+
+
 class stdClass#32 (27) {
-  public $0 => class stdClass#5 (3) {
-    public $id => int(27)
-    public $name => string(13) "Ngoma Fortuna"
-    public $email => string(21) "ngoma.fortuna@mtec.ao"
-  }
-  public $1 => class stdClass#6 (3) {
-    public $id => int(28)
-    public $name => string(12) "Rosa Fortuna"
-    public $email => string(20) "rosa.fortuna@mtec.ao"
-  }
-  public $2 => class stdClass#7 (3) {
-    public $id => int(29)
-    public $name => string(17) "Lucrécia Fortuna"
-    public $email => string(24) "lucrecia.fortuna@mtec.ao"
-  }
 }
 ...
 
 // PATCH
-class stdClass#5 (3) {
-  public $id => int(29)
-  public $name => string(17) "Lucrécia Fortuna"
-  public $email => string(24) "lucrecia.fortuna@mtec.ao"
+class stdClass#7 (2) {
+  public $data =>
+    class stdClass#5 (3) {
+      public $id => int(29)
+      public $name => string(17) "Lucrécia Fortuna"
+      public $email => string(24) "lucrecia.fortuna@mtec.ao"
+    }
+  public $status =>
+    class stdClass#6 (2) {
+      public $number => int(200)
+      public $message => string(12) "OK (Success)"
+    }
 }
 
 // POST
-class stdClass#5 (1) {
-  public $message => string(25) "User created successfully"
+class stdClass#7 (2) {
+  public $data =>
+    class stdClass#5 (1) {
+      public $message => string(25) "User created successfully"
+    }
+  public $status =>
+    class stdClass#6 (2) {
+      public $number => int(200)
+      public $message => string(12) "OK (Success)"
+    }
 }
 
 // PUT
-class stdClass#5 (1) {
-  public $message => string(25) "User updated successfully"
+class stdClass#7 (2) {
+  public $data =>
+    class stdClass#5 (1) {
+      public $message => string(25) "User updated successfully"
+    }
+  public $status =>
+    class stdClass#6 (2) {
+      public $number => int(200)
+      public $message => string(12) "OK (Success)"
+    }
 }
 
 // DELETE
-class stdClass#5 (1) {
-  public $message => string(25) "User deleted successfully"
+class stdClass#7 (2) {
+  public $data =>
+    class stdClass#5 (1) {
+      public $message => string(25) "User deleted successfully"
+    }
+  public $status =>
+    class stdClass#6 (2) {
+      public $number => int(200)
+      public $message => string(12) "OK (Success)"
+    }
 }
 
 ```
