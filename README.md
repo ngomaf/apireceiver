@@ -1,5 +1,5 @@
 # APIReceiver
-Professional API consumer/receiver (Consudor profissional de API)
+Professional API consumer/receiver (Consumidor profissional de API)
 
 This component have two features (Suported methods):
 - GET (to get all - para receber todos)
@@ -17,7 +17,8 @@ class stdClass#5 (1) {
 ```
 
 ## Require
-Necessary PHP 8.0 or more (Necessário PHP 8.0 ou superior)
+Necessary PHP 8.0 or more, ext-curl 7.81.0 or more (Necessário PHP 8.0 ou superior, ext-curl 7.81.0 ou superior)
+
 
 ## Install
 ```shell
