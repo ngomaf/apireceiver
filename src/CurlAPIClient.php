@@ -4,6 +4,8 @@ namespace Ngomafortuna\Apireceiver;
 
 class CurlAPIClient implements APIClientInterface
 {
+    use HTTPMsgTrait;
+
     private $channel;
 
     public function __construct(public string $url) {
@@ -91,6 +93,6 @@ class CurlAPIClient implements APIClientInterface
             ];
         }
         $error = empty($error)? HTTPMsg::get($status): $error;
-        return (object) ['status' => $status, 'message' => HTTPMsg::get($status)];
+        return (object) ['data' => (object) ['status' => $status, 'message' => $error]];
     }
 }
