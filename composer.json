@@ -17,6 +17,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.0",
-        "curl": ">=7.81.0"
+        "ext-curl": ">=7.81.0"
     }
 }
