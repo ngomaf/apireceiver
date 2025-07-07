@@ -1,0 +1,21 @@
+{
+    "name": "ngomafortuna/apireceiver",
+    "description": "Professional API consumer/receiver (Consudor profissional de API)",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ngomafortuna\\Apireceiver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ngoma Fortuna",
+            "email": "ngomafortuna@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0"
+    }
+}
