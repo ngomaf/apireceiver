@@ -91,7 +91,7 @@ class CurlAPIClient implements APIClientInterface
             ];
         }
         $error = empty($error)? static::getHTTPMsg($status): $error;
-        return (object) ['data' => (object) ['status' => $status, 'message' => $error]];
+        return (object) ['status' => (object) ['number' => $status, 'message' => $error]];
     }
 
     public static function getHTTPMsg(int $status): string
