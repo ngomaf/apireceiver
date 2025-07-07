@@ -86,7 +86,8 @@ class CurlAPIClient implements APIClientInterface
                 'data' => (object) json_decode($response),
                 'status' => (object) [
                     'number' => $status,
-                    'message' => static::getHTTPMsg($status)
+                    'message' => HTTPMsg::get($status)
+                    // 'message' => static::getHTTPMsg($status)
                 ]
             ];
         }
