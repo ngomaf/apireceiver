@@ -87,11 +87,10 @@ class CurlAPIClient implements APIClientInterface
                 'status' => (object) [
                     'number' => $status,
                     'message' => HTTPMsg::get($status)
-                    // 'message' => static::getHTTPMsg($status)
                 ]
             ];
         }
-        $error = empty($error)? static::getHTTPMsg($status): $error;
+        $error = empty($error)? HTTPMsg::get($status): $error;
         return (object) ['status' => (object) ['number' => $status, 'message' => $error]];
     }
 
